@@ -4,10 +4,7 @@ const mongoose = require("mongoose");
 require('dotenv').config()
 
 const app = express();
-app.use(cors({
-  // origin: "*",
-  // methods: ['GET', 'POST']
-}))
+app.use(cors())
 
 app.use(express.static('public'));
 app.use(express.json())
