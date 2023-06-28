@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 require('dotenv').config()
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin: "https://digital-invite-202301.digicraft.link/",
+  methods: ["POST", "GET"]
+}))
 
 app.use(express.static('public'));
 app.use(express.json())
