@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const app = express();
 app.use(cors({
-  origin: "https://digital-invite-202301.digicraft.link/",
+  origin: "*",
   methods: ["POST", "GET"]
 }))
 
