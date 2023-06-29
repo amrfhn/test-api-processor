@@ -40,3 +40,4 @@ app.listen(port, () => console.log('Server started'));
 /** Settings available routers for digicraft-api-processor DB **/
 app.use('/api/rsvp', require('./routes/rsvp'));
 app.use('/api/wish', require('./routes/wish'));
+app.use('/api/admin', require('./routes/admin'));
