@@ -20,7 +20,7 @@ router.post('/', async (req,res) => {
         phoneNumber: req.body.phoneNumber,
         guestType: req.body.guestType,
         numberPax: req.body.numberPax,
-        timeSlot: req.body.timeslot,
+        timeslot: req.body.timeslot,
     })
 
     try {
