@@ -20,7 +20,7 @@ const username = process.env.DB_USERNAME;
 const db_name = process.env.DB_NAME;
 
 mongoose.connect(
-    `mongodb+srv://${username}:${password}@digicraft-central.rjug2zb.mongodb.net/${db_name}?retryWrites=true&w=majority`,
+    `mongodb+srv://${username}:${password}@cluster0.wtjyj.mongodb.net/${db_name}?retryWrites=true&w=majority&appName=Cluster0`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -28,7 +28,6 @@ mongoose.connect(
         // serverApi: ServerApiVersion.v1,
     }
 );
-
 
 
 db.on('error', (error) => console.error(error));
