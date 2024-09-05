@@ -19,7 +19,7 @@ const password = process.env.DB_PASSWORD;
 const username = process.env.DB_USERNAME;
 const db_name = process.env.DB_NAME;
 
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false); 
 
 mongoose.connect(
   `mongodb+srv://${username}:${password}@cluster0.wtjyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
