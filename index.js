@@ -22,7 +22,7 @@ const db_name = process.env.DB_NAME;
 mongoose.set("strictQuery", false);
 
 mongoose.connect(
-  `mongodb+srv://admin01:PPTAxC5jdRyiH7X1@cluster0.wtjyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
+  `mongodb+srv://${username}:${password}@cluster0.wtjyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
