@@ -20,9 +20,9 @@ const username = process.env.DB_USERNAME;
 const db_name = process.env.DB_NAME;
 
 mongoose.set("strictQuery", false);
-
+// mongodb+srv://digicraftAdmin:<db_password>@digicraft-central.rjug2zb.mongodb.net/?retryWrites=true&w=majority&appName=digicraft-central
 mongoose.connect(
-  `mongodb+srv://${username}:${password}@digicraft-central.rjug2zb.mongodb.net/${db_name}?retryWrites=true&w=majority`,
+  `mongodb+srv://${username}:${password}@digicraft-central.rjug2zb.mongodb.net/${db_name}?retryWrites=true&w=majority&appName=digicraft-central`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
