@@ -14,7 +14,7 @@ const rsvpSchema = new mongoose.Schema({
         required: false
     },
     numberPax: {
-        type: String,
+        type: Number,
         required: false
     },
     timeslot: {
