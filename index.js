@@ -6,7 +6,8 @@ require('dotenv').config()
 const app = express();
 app.use(cors({
   origin: ["http://localhost:3000", "http://localhost:3001", "https://digital-invite-202301.digicraft.link", "https://digital-invite-202401.digicraft.link", "https://digital-invite-202402.digicraft.link"],
-  methods: ['GET', 'POST', 'DELETE']
+  methods: ['GET', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 app.use(express.static('public'));
