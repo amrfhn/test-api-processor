@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Digicraft API Processor
+    env: node
+    plan: free
+    buildCommand: |
+      npm install --yes
+      npm install -D webpack-cli --yes
+      npm run build
+    startCommand: node index.js
