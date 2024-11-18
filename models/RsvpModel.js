@@ -21,6 +21,16 @@ const rsvpSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    projectId: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 })
 
-module.exports = mongoose.model('Rsvp', rsvpSchema)
+// const RsvpModel = mongoose.model('RsvpModel', rsvpSchema)
+
+module.exports = rsvpSchema

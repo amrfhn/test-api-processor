@@ -8,7 +8,15 @@ const wishSchema = new mongoose.Schema({
     message: {
         type: String,
         required: true
-    }
+    },
+    createdAt: { 
+        type: Date, 
+        default: Date.now 
+    },
+    projectId: {
+        type: String,
+        required: true,
+    }    
 });
 
-module.exports = mongoose.model('Wish', wishSchema);
+module.exports = wishSchema
