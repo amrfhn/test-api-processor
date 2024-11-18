@@ -1,10 +1,11 @@
 {
-  "name": "Digicraft API Digital Invite 202301",
+  "name": "Digicraft API Processor",
   "version": "1.0.0",
   "description": "Node Express",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
 
   },

@@ -1,0 +1,1 @@
+"use strict";exports.id=784,exports.ids=[784],exports.modules={46784:(s,e,o)=>{o.d(e,{AssumeRoleCommand:()=>t.Q,STSClient:()=>d.i});var t=o(75592),d=o(28658)}};
