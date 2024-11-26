@@ -6,6 +6,8 @@ const isTableExists = require('../utils/validateTable');
 
 // Getting all based on collectionId (tableName)
 router.get('/:collectionId', async (req, res) => {
+    console.log('GET ALL WISHES..')
+
     const { collectionId } = req.params;
 
     try {
@@ -29,6 +31,8 @@ router.get('/:collectionId', async (req, res) => {
 
 // Create dynamic table
 router.post('/create/:collectionId', async (req, res) => {
+    console.log('CREATE TABLE WISHES..', req.params.collectionId)
+
     const { collectionId } = req.params;
 
     const data = {
@@ -57,6 +61,8 @@ router.post('/create/:collectionId', async (req, res) => {
 
 // Creating one data
 router.post('/add/:collectionId', async (req, res) => {
+    console.log('CREATE WISH..')
+
     const { collectionId } = req.params;
     const data = req.body;
 

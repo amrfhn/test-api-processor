@@ -8,6 +8,8 @@ const getModel = require('../utils/validateModel');
 
 // Getting all based on collectionId (tableName)
 router.get('/:collectionId', async (req, res) => {
+    console.log('GET ALL RSVPs..')
+    
     const { collectionId } = req.params;
 
     try {
@@ -31,6 +33,8 @@ router.get('/:collectionId', async (req, res) => {
 
 // Create dynamic table
 router.post('/create/:collectionId', async (req, res) => {
+    console.log('CREATE TABLE RSVP..')
+
     const { collectionId } = req.params
 
     const data = {
@@ -62,6 +66,8 @@ router.post('/create/:collectionId', async (req, res) => {
 
 // Creating one data
 router.post('/add/:collectionId', async (req, res) => {
+    console.log('CREATE RSVP..')
+
     const { collectionId } = req.params;
     const data = req.body;
 
@@ -85,6 +91,8 @@ router.post('/add/:collectionId', async (req, res) => {
 
 // Deleting one
 router.delete('/delete/:collectionId/:id', async (req, res) => {
+    console.log('DELETE RSVP..')
+
     const { collectionId, id } = req.params;
 
     try {

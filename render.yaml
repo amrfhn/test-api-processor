@@ -7,4 +7,4 @@ services:
       npm install --yes
       npm install -D webpack-cli --yes
       npm run build
-    startCommand: node index.js
+    startCommand: node ./src/index.js

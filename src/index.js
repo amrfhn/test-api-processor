@@ -1,9 +1,26 @@
-const express = require("express");
+const express = require("express")
+const webpack = require('webpack')
+const webpackConfig = require('../webpack.config')
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 const cors = require('cors')
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 require('dotenv').config()
 
-const app = express();
+const app = express()
+const compiler = webpack(webpackConfig)
+
+// Enable webpack-hot-middleware
+app.use(webpackHotMiddleware(compiler));
+
+// Enable webpack-dev-middleware
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: webpackConfig.output.publicPath,
+    stats: 'errors-only',
+  })
+);
+
 app.use(cors({
   origin: ["http://localhost:3000", "http://localhost:3001", "https://digital-invite-202301.digicraft.link", "https://digital-invite-202401.digicraft.link", "https://digital-invite.digicraft.link"],
   methods: ['GET', 'POST', 'DELETE'],
@@ -37,5 +54,10 @@ db.once('open', () => console.log('Connected to Database'));
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
 /** Settings available routers for digicraft-api-processor DB **/
-app.use('/api/rsvp', require('./routes/rsvp'));
-app.use('/api/wish', require('./routes/wish'));
+app.use('/api/rsvp', require('../routes/rsvp'));
+app.use('/api/wish', require('../routes/wish'));
+
+// Enable HMR
+if (module.hot) {
+  module.hot.accept(); // Accept updated modules without a full reload
+}

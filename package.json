@@ -1,10 +1,10 @@
 {
-  "name": "Digicraft API Processor",
-  "version": "1.0.0",
-  "description": "Node Express",
-  "main": "index.js",
+  "name": "digicraft_api_processor",
+  "version": "2.0.0",
+  "description": "Backend API services for Digicraft",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,16 +17,18 @@
     "mongodb-client-encryption": "^6.1.0",
     "mongoose": "^6.4.1",
     "nedb": "^1.8.0",
-    "netlify-lambda": "^2.0.16",
-    "node-fetch": "^2.6.0",
-    "serverless-http": "^3.2.0"
+    "terser-webpack-plugin": "^5.3.10"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.26.0",
+    "@swc/core": "^1.9.3",
     "babel-loader": "^9.1.2",
-    "terser-webpack-plugin": "^5.3.9",
-    "webpack": "^5.88.0",
+    "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^7.4.2",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-hot-middleware": "^2.26.1",
     "webpack-node-externals": "^3.0.0"
   }
 }
