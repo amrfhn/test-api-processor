@@ -1,6 +1,6 @@
 const express = require("express")
 const webpack = require('webpack')
-const webpackConfig = require('../webpack.config')
+const webpackConfig = require('./webpack.config')
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const cors = require('cors')
@@ -54,8 +54,8 @@ db.once('open', () => console.log('Connected to Database'));
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
 /** Settings available routers for digicraft-api-processor DB **/
-app.use('/api/rsvp', require('../routes/rsvp'));
-app.use('/api/wish', require('../routes/wish'));
+app.use('/api/rsvp', require('./routes/rsvp'));
+app.use('/api/wish', require('./routes/wish'));
 
 // Enable HMR
 if (module.hot) {

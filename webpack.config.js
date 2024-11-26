@@ -5,7 +5,7 @@ const nodeExternals = require("webpack-node-externals")
 module.exports = {
    entry: [
       'webpack-hot-middleware/client', // Add HMR client
-      './src/index.js', // Your application entry point
+      './index.js', // Your application entry point
    ],
    output: {
       path: path.resolve(__dirname, 'dist'),

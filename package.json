@@ -2,10 +2,10 @@
   "name": "digicraft_api_processor",
   "version": "2.0.0",
   "description": "Backend API services for Digicraft",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "node ./index.js",
+    "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Amir Jefri",
