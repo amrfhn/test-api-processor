@@ -36,20 +36,6 @@ module.exports = {
          /Critical dependency: require function is used in a way in which dependencies cannot be statically extracted/
       ],
    },
-   externalsPresets: { node: true },   // <-- here
+   externalsPresets: { node: true },
    externals: [nodeExternals()],
-   // externals: { // Exclude it from Webpack
-   //    // "uglify-js": "commonjs uglify-js",
-   //    //    "esbuild": "commonjs esbuild",
-   //    //    "@swc/core": "commonjs @swc/core",
-   //    //    "esbuild/package.json": "commonjs esbuild/package.json",
-   //    //    "@swc/core/package.json": "commonjs @swc/core/package.json",
-   //    //    "uglify-js/package.json": "commonjs uglify-js/package.json",
-   //    //    "bson-ext": "commonjs bson-ext",
-   //    //    "kerberos": "commonjs kerberos",
-   //    //    "@mongodb-js/zstd": "commonjs @mongodb-js/zstd",
-   //    //    "snappy": "commonjs snappy",
-   //    //    "snappy/package.json": "commonjs snappy/package.json",
-   //    //    "aws4": "commonjs aws4",
-   // },
 };
